@@ -7,9 +7,9 @@ export default {
     extend: {
       fontFamily: {
         sans: ['fs_elliot_probold', 'sans-serif'],
-        elliotProBold: ['fs_elliot_probold', 'sans-serif'], // Ключ для fs_elliot_probold
-        inter: ['Inter', 'sans-serif'],                     // Ключ для Inter
-        montserrat: ['Montserrat', 'sans-serif'],           // Ключ для Montserrat
+        elliotProBold: ['fs_elliot_probold', 'sans-serif'],
+        inter: ['Inter', 'sans-serif'],
+        montserrat: ['Montserrat', 'sans-serif'],
         openSans: ['Open Sans', 'sans-serif'],
       },
     },
