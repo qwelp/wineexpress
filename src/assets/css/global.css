@@ -4,3 +4,8 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+    .no-outline {
+        @apply outline-none focus:outline-none;
+    }
+}

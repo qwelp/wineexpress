@@ -1,0 +1,105 @@
+mixin headerMenuSub(sectionData)
+    .-mx-4
+        .slider-menu-product-sections.swiper-container(data-section=`catalog-section-${sectionData.section}`)
+            .swiper-wrapper.px-4
+                each item in sectionData.items
+                    .swiper-slide.py-4
+                        a.slider-menu-product-sections__cart.h-24(href="#")
+                            .px-7=item.name
+                            img(src=`${item.image}`, alt='')
+            .swiper-slide
+                .w-6
+        .slider-menu-product-sections.swiper-container(data-section=`catalog-price-range-${sectionData.section}`)
+            .swiper-wrapper.px-4
+                each item in ['Вино до 1000', '1000 - 2000', '3000 - 4000', '5000 - 6000', '7000 - 8000']
+                    .swiper-slide.pb-4
+                        a.block.border.border-lightBackground(class="shadow-[0px_8px_16px_0px_rgba(0,0,0,0.05)]" href="#")
+                            span.block.px-7.py-3=item
+            .swiper-slide
+                .w-6
+        .slider-menu-product-sections.swiper-container.mb-4(data-section=`catalog-sections-filters-${sectionData.section}`)
+            .swiper-wrapper.px-4
+                each item in ['Все вино', 'Красное', 'Белое', 'Розовое']
+                    .swiper-slide
+                        button.border.border-anotherGray.py-2.menu-section-filter(
+                            class=`rounded-[20px] ${item === 'Все вино' ? 'active' : ''}`
+                            type="button"
+                            aria-label=`${item}`
+                        )
+                            span.px-10=item
+                .swiper-slide
+                    .w-6
+        .px-4
+            .mb-5
+                p.font-openSans.leading-6.font-semibold.mb-4 Сахар
+                ul
+                    each item in ['Сухое', 'Полусухое', 'Полусладкое']
+                        li: a.font-openSans.font-light.text-primary.leading-4(href="#")=item
+            .mb-5
+                p.font-openSans.leading-6.font-semibold.mb-4 Сорт
+                ul
+                    each item in ['Каберне', 'Пино Гриджио', 'Совиньон Блан', 'Пино Нуар', 'Цвайгельт']
+                        li: a.font-openSans.font-light.text-primary.leading-4(href="#")=item
+            .mb-5
+                p.font-openSans.leading-6.font-semibold.mb-4 Страна
+                ul
+                    each item in ['Португалия', 'Армения', 'Франция', 'Россия']
+                        li: a.font-openSans.font-light.text-primary.leading-4(href="#")=item
+        .menu-brands
+            .flex.items-center.justify-between.px-4
+                p.font-openSans.text-5.font-semibold Бренды вин
+                a.flex.items-center.gap-2.text-accent.font-semibold.font-openSans(href="#" class="text-[14px]")
+                    span Все бренды
+                    img(src='/src/assets/images/icon-arrow-right-mini.svg', alt='стрелка вправо')
+            .slider-menu-product-sections.swiper-container(data-section=`catalog-brands-${sectionData.section}`)
+                .swiper-wrapper.px-4
+                    each item in [1, 2, 3]
+                        .swiper-slide.py-4
+                            a.slider-menu-product-sections__cart.p-5(href="#")
+                                img.object-cover(
+                                    src=`/src/assets/images/menu/brand-${item}.webp`,
+                                    alt='',
+                                )
+                    .swiper-slide
+                        .w-6
+
+ul.flex.flex-col.gap-2.mb-4
+    li
+        a(href="#", class="flex items-center gap-2 text-base font-semibold font-openSans leading-6")
+            img.w-6.h-6(src='/src/assets/images/user-account-icon-mobile.svg', alt='Личный кабинет')
+            span Личный кабинет
+    li.border-b.border-customGray
+    li
+        a(href="#", class="flex items-center gap-2 text-base font-semibold font-openSans leading-6")
+            img.w-6.h-6(src='/src/assets/images/location-icon-mobile.svg', alt='Местоположение')
+            span Москва
+    li.border-b.border-customGray
+    li
+        a(href="#", class="flex items-center gap-2 text-base font-semibold font-openSans leading-6")
+            img.w-6.h-6(src='/src/assets/images/shop-marker-icon-mobile.svg', alt='Магазины')
+            span Винотеки
+ul.catalog-menu.flex.flex-col.gap-2
+    li
+        a.flex.items-center.gap-2.text-accent.font-semibold.font-openSans(href="#")
+            span Скидки и акции
+            img(src='/src/assets/images/icon-arrow-right.svg', alt='стрелка вправо')
+    li
+        a.catalog-menu__link.flex.items-center.font-semibold.font-openSans.text-menuLink(href="#" data-section=`Вино`) Вино
+        .catalog-menu__sub.hidden(data-section=`Вино`)
+            +headerMenuSub({ items: mobileMenuSections, section: 'vino' })
+    li
+        a.catalog-menu__link.flex.items-center.font-semibold.font-openSans.text-menuLink(href="#" data-section=`Игристое, шампанское`) Игристое, шампанское
+        .catalog-menu__sub.hidden(data-section=`Игристое, шампанское`)
+            +headerMenuSub({ items: mobileMenuSections, section: 'shampanskoe' })
+    li
+        a.catalog-menu__link.flex.items-center.font-semibold.font-openSans.text-menuLink(href="#" data-section=`Крепкие напитки`) Крепкие напитки
+        .catalog-menu__sub.hidden(data-section=`Крепкие напитки`)
+            +headerMenuSub({ items: mobileMenuSections, section: 'krepkie-napitki' })
+    li
+        a.catalog-menu__link.flex.items-center.font-semibold.font-openSans.text-menuLink(href="#" data-section=`Деликатесы`) Деликатесы
+        .catalog-menu__sub.hidden(data-section=`Деликатесы`)
+            +headerMenuSub({ items: mobileMenuSections, section: 'delikates' })
+    li
+        a.catalog-menu__link.flex.items-center.font-semibold.font-openSans.text-menuLink(href="#" data-section=`Вода`) Вода
+        .catalog-menu__sub.hidden(data-section=`Вода`)
+            +headerMenuSub({ items: mobileMenuSections, section: 'voda' })
