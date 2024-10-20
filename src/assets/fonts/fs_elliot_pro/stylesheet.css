@@ -1,0 +1,90 @@
+@font-face {
+    font-family: 'FS Elliot Pro';
+    src: url('FSElliotPro-BoldItalic.woff2') format('woff2'),
+        url('FSElliotPro-BoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'FS Elliot Pro';
+    src: url('FSElliotPro-Light.woff2') format('woff2'),
+        url('FSElliotPro-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'FS Elliot Pro';
+    src: url('FSElliotPro-Thin.woff2') format('woff2'),
+        url('FSElliotPro-Thin.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'FS Elliot Pro';
+    src: url('FSElliotPro-Bold.woff2') format('woff2'),
+        url('FSElliotPro-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'FS Elliot Pro';
+    src: url('FSElliotPro-Heavy.woff2') format('woff2'),
+        url('FSElliotPro-Heavy.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'FS Elliot Pro';
+    src: url('FSElliotPro.woff2') format('woff2'),
+        url('FSElliotPro.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'FS Elliot Pro';
+    src: url('FSElliotPro-ThinItalic.woff2') format('woff2'),
+        url('FSElliotPro-ThinItalic.woff') format('woff');
+    font-weight: 100;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'FS Elliot Pro';
+    src: url('FSElliotPro-HeavyItalic.woff2') format('woff2'),
+        url('FSElliotPro-HeavyItalic.woff') format('woff');
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'FS Elliot Pro';
+    src: url('FSElliotPro-LightItalic.woff2') format('woff2'),
+        url('FSElliotPro-LightItalic.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'FS Elliot Pro';
+    src: url('FSElliotPro-Italic.woff2') format('woff2'),
+        url('FSElliotPro-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+

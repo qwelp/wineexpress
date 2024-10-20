@@ -1,0 +1,11 @@
+section(class="mb-[60px]")
+    .container
+        h2.text-center(class="text-[28px] font-bold tracking-[0px] mb-[40px]") Подборки
+        .flex.items-center(class="mb-[40px]")
+            each name, i in ['Топ рейтинга', 'Крепкие напитки', 'На девичник', 'Под фильм']
+                .flex-1
+                    picture.block(class="mb-[40px]")
+                        img(src=`/src/assets/images/pages/index/compilations-${i+1}.png` alt="")
+                    a(href="#" class="text-center text-[16px]").block=name
+        .flex.justify-center
+            a(href="#" class="text-[#A41012] text-[16px] h-[40px] py-[12px] px-[67px] inline-flex justify-center items-center gap-[10px] flex-shrink-0 rounded-[10px] border-[1px] border-[#A41012]") Все подборки

@@ -1,0 +1,6 @@
+.swiper-container.js-slider-menu(class="mb-[21px]")
+    .swiper-wrapper
+        each item in ['Вино до 1000', '1000 - 2000', '3000 - 4000', '5000 - 6000', '7000 - 8000', '1000 - 2000', '3000 - 4000', '5000 - 6000', '7000 - 8000']
+            .swiper-slide.slider-menu-swiper-slide
+                .flex.items-center.justify-center.border.bg-white(class="rounded-[10px] border-[#D9D9D9] whitespace-nowrap")
+                    a(href="#", class="py-[6.5px] xl:py-[11px] text-[14px] md:text-[10px] xl:text-[16px]")=item

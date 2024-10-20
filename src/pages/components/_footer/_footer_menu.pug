@@ -1,0 +1,7 @@
+.flex.justify-between(class="gap-[15px] md:gap-0 flex-col md:flex-row lg:mx-[91px] 2xl:mx-[183px]")
+    each section in footerMenu
+        .flex.flex-col(class="gap-4 mt-[8px] md:mt-0 md:gap-1 2xl:gap-4")
+            p.text-white.font-bold(class="text-base leading-[12px] md:text-[10px] 2xl:text-base")=section.title
+            ul.flex.flex-col(class="gap-[3px] md:gap-0 2xl:gap-2")
+                each item in section.items
+                    li: a.text-gray1000(class="text-[16px] md:leading-[12px] md:text-[10px] 2xl:text-base")(href="#")=item.title

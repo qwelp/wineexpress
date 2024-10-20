@@ -1,0 +1,10 @@
+section
+    .container
+        h2.text-center(class="text-[28px] font-bold tracking-[0px] mb-[40px]") Популярные категории
+        .flex.items-center.justify-between(class="gap-[32px] mb-[50px]")
+            each item, i in popularProducts
+                a.bg-gray100.bg-no-repeat.bg-left-bottom.flex.justify-end.flex-1(
+                    href="#"
+                    class=`h-[84px] rounded-[10px] pt-[10px] pr-[20px]`
+                    style=`background-image: url(/src/assets/images/pages/index/popular-categories-${i+1}.png)`)
+                    span(class="top-[28px] right-[15px]") !{item.title}

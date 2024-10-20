@@ -1,0 +1,29 @@
+mixin productCart(name, img)
+    .product-cart(class="pb-[10px]")
+        .relative(class="p-[30px] border shadow-[0px_4px_4px_0px_rgba(0,0,0,0.20)] rounded-[10px] border-solid border-gray100")
+            .absolute.flex.flex-col.items-start(class="top-[30px] left-[30px] gap-[12px]")
+                p(class="text-[14px] font-light") Артикул: 21240
+                .flex.items-center(class="gap-[4px] rounded-[2px] bg-[#D9D9D9] h-[26px] px-[8px]")
+                    svg(class="w-[15px] h-[14px]")
+                        use(href="#icon-star")
+                    p(class="") 4.7
+                .flex.items-center(class="gap-[4px] rounded-[2px] bg-[#B85F69] h-[26px] px-[8px]")
+                    p(class="leading-[18px] text-[#FFF] text-[14px]") Vivino
+                    p(class="leading-[18px] text-[#FFF] text-[14px]") 4.7
+                p(class="rounded-[2px] bg-[#FFF3E7] leading-[18px] text-[#535353] text-[10px] px-[11px]") хит
+                p(class="rounded-[2px] bg-[#D4DFF4] leading-[18px] text-[#535353] text-[10px] px-[11px]") new
+            .flex.items-center.justify-center(class="mb-[13px]")
+                img(src=`${img}` class="h-[273px]")
+            a(href="#" class="text-center block overflow-ellipsis text-[16px] font-bold mb-[20px]")=name
+            .flex.items-center.justify-center(class="gap-[8px] mb-[25px]")
+                p(class="text-[14px] font-light") Франция
+                p(class="text-[14px] font-light") Красное
+                p(class="text-[14px] font-light") Сухое
+                p(class="text-[14px] font-light") 2014 год
+                .inline-flex.items-center.justify-center(class="px-[12px] h-[18px] rounded-[2px] bg-[#EDF8DC] text-[#535353] text-[10px]") bio
+            .flex.items-center.justify-center(class="gap-[8px] mb-[5px]")
+                p 1 000 000 ₽
+                .inline-flex.items-center.justify-center(class="px-[8px] h-[18px] rounded-[2px] bg-[#A41012] text-white text-[10px]") -40%
+            p(class="text-[#B12333] text-[20px] font-bold text-center mb-[24px]") 5 000 000 ₽
+            .flex.justify-center
+                button(class="py-[12px] rounded-[10px] bg-primary text-white w-[272px]") В корзину

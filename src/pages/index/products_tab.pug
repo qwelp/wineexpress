@@ -1,0 +1,27 @@
+include ../components/_mixin/product_cart
+
+.container
+    .js-products-tabs(class="mb-[60px]")
+        .flex.items-center.justify-center(class="gap-[40px] mb-[40px]")
+            each name, i in ['Новинки', 'Популярное', 'Скидки']
+                button(
+                    data-section=`${name}`
+                    class="text-[28px] tracking-[0px] opacity-80 leading-[normal]"
+                    class=(i === 0) ? 'font-bold': '')=name
+        .js-products-tabs__items.relative(class="mb-[40px]")
+            .js-products-tabs__slider.swiper-container.overflow-hidden(class="px-[5px]")
+                button.js-products-tabs__nav-left.absolute.z-10.flex.items-center.justify-center(class="w-[52px] h-[52px] bg-[#F2F3F5] rounded-full top-[50%] -left-[6px] -translate-y-1/2")
+                    svg(class="w-[27px] h-[12px]")
+                        use(href="#icon-arrow-slider-left")
+                button.js-products-tabs__nav-right.absolute.z-10.flex.items-center.justify-center(class="w-[52px] h-[52px] bg-[#F2F3F5] rounded-full top-[50%] -right-[6px] -translate-y-1/2")
+                    svg(class="w-[27px] h-[12px]")
+                        use(href="#icon-arrow-slider-right")
+                .swiper-wrapper
+                    each item in productsIndex
+                        .swiper-slide
+                            +productCart(item.name, item.image)
+                    each item in productsIndex
+                        .swiper-slide
+                            +productCart(item.name, item.image)
+        .flex.justify-center
+            a(href="#" class="text-[#A41012] text-[16px] h-[40px] py-[12px] px-[67px] inline-flex justify-center items-center gap-[10px] flex-shrink-0 rounded-[10px] border-[1px] border-[#A41012]") Все новинки

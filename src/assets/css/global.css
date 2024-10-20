@@ -8,4 +8,105 @@
     .no-outline {
         @apply outline-none focus:outline-none;
     }
+
+    .popup-menu {
+        @apply max-h-[100vh] overflow-y-auto bg-white z-10 fixed top-0 left-0 right-0 lg:left-auto lg:right-auto lg:bottom-auto lg:absolute shadow-[0px_4px_8px_0px_rgba(0,0,0,0.15)] rounded-2xl lg:w-[110%] 2xl:w-[1174px] py-[18px] lg:top-[calc(100%_+_1.25rem_+_20px)];
+    }
+
+    .w-fit-important {
+        width: fit-content !important;
+    }
+
+    .no-outline {
+        @apply outline-none focus:outline-none;
+    }
+}
+
+.popup-menu-link-sub.active {
+    @apply bg-gray50 rounded-[0px_10px_10px_0px];;
+
+    & svg {
+        @apply fill-accentRed;
+    }
+
+    & .popup-menu-link-sub__item {
+        @apply text-[16px] font-bold block;
+    }
+
+    & .popup-menu-link-sub__menu {
+
+    }
+}
+
+.slider-pagination.white .swiper-pagination-bullet {
+    background: rgba(255, 255, 255, 0.30);
+}
+
+
+.slider-pagination.white .swiper-pagination-bullet-active {
+    background: white;
+}
+
+.popup-menu-link-filter.active {
+    @apply bg-gray50 border-gray50;
+}
+
+.filter-drop-shadow-mini {
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.05);
+}
+
+.popup-menu .swiper-scrollbar {
+    height: 2px !important;
+    background-color: #e0e0e0;
+}
+
+.slider-brand-index {
+    width: 220px !important;
+    height: 220px !important;
+}
+
+.popup-menu .swiper-scrollbar-drag {
+    height: 2px !important;
+    background-color: #333;
+    border-radius: 1px !important;
+}
+
+@media (max-width: 1792px) {
+    .popup-menu {
+        position: fixed;
+        top: 150px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 1200px;
+    }
+}
+
+@media (max-width: 1280px) {
+    .popup-menu {
+        top: 130px;
+        width: 587px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .popup-menu {
+        top: 100px;
+        width: 587px;
+    }
+}
+
+@media (max-width: 768px) {
+    .popup-menu {
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        transform: inherit;
+        border-radius: 0;
+        width: inherit;
+    }
+
+    .slider-menu-swiper-slide {
+        width: 180px !important;
+    }
 }

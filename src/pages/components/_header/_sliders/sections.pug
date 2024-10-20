@@ -1,0 +1,6 @@
+.swiper-container.js-slider-menu(class="mb-[15px] md:mb-[25px]")
+    .swiper-wrapper
+        each item in sectionData.items
+            .swiper-slide.slider-menu-swiper-slide
+                a.flex.items-start.justify-end(href="#", class="h-[84px] md:h-[42px] xl:h-[84px] bg-no-repeat bg-[#F2F3F5] bg-contain rounded-[10px] pt-[10px] pr-[20px]" style=`background-image: url(${item.image})`)
+                    span(class="text-[16px] md:text-[10px] xl:text-[16px]")=item.name

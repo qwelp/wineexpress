@@ -1,0 +1,17 @@
+.menu-brands(class="ml-[0px] md:ml-[20px] xl:ml-[30px] mt-[5px]")
+    .flex.items-center.justify-between(class="mb-[20px] xl:mb-[15px] md:px-4")
+        p(class="text-[16px] md:text-[10px] xl:text-[20px] font-bold md:-ml-[17px]") Бренды вин
+        a.flex.items-center.text-accentRed(href="#" class="text-[16px] md:text-[10px] xl:text-[20px] font-bold xl:mr-[25px] gap-[5px] xl:gap-[12px]")
+            span Все бренды
+            svg.fill-accentRed(class="w-[15px] h-[5px] xl:w-[26px] xl:h-[15px]")
+                use(href="#icon-arrow-middle-right")
+    .js-slider-menu-brands.swiper-container.relative.overflow-hidden(class="pb-[25px]")
+        .swiper-wrapper
+            each item in [1, 2, 3, 2, 3, 2, 3, 2, 3, 2, 3, 2, 3, 2, 3, 2, 3]
+                .swiper-slide.slider-menu-swiper-slide.flex-shrink-0.w-fit-important
+                    a.flex.items-center.justify-center(href="#", class="w-[180px] h-[180px] md:w-[110px] md:h-[110px] xl:w-[220px] xl:h-[220px] p-[5px] md:p-[20px] xl:p-[41px] rounded-[8px] md:rounded-[10px] border border-[#D9D9D9]")
+                        img.object-contain(
+                            src=`/src/assets/images/menu/brand-${item}.webp`,
+                            alt='',
+                        )
+        .swiper-scrollbar(class="-ml-[5px] xl:-ml-[10px]")

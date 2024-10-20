@@ -1,0 +1,19 @@
+.container(class="mb-[40px]")
+    .grid(class="grid-cols-[860px_1fr] gap-[24px]")
+        .js-sliders-hero-banners.swiper-container.overflow-hidden.relative
+            .js-sliders-hero-banners__pagination.absolute.z-10.flex.justify-center.slider-pagination.white(class="mb-[11px] left-[50%] gap-[21px]")
+            .swiper-wrapper
+                each item in [1, 2, 3]
+                    .swiper-slide.flex-shrink-0.w-fit-important
+                        img(src="/src/assets/images/pages/index/hero-banner.png")
+        .flex.flex-col
+            .flex(class="gap-[24px]")
+                a(href="#")
+                    img(src="/src/assets/images/pages/index/hero-banner-mini-1.png")
+                a(href="#")
+                    img(src="/src/assets/images/pages/index/hero-banner-mini-2.png")
+            a.flex.items-center.justify-center.bg-gray100.mt-auto(href="#", class="rounded-[10px] h-[60px]")
+                .inline-flex.items-center(class="gap-[20px]")
+                    span Все акции
+                    svg.relative(class="w-[26px] h-[11px] top-[2px]")
+                        use(href="#icon-arrow-right-mini")

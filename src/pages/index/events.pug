@@ -1,0 +1,16 @@
+section(class="mb-[60px]")
+    .container
+        h2.text-center(class="text-[28px] font-bold tracking-[0px] mb-[40px]") Мероприятия
+        .flex.justify-between(class="gap-[32px] mb-[40px]")
+            each item in [1, 2, 3, 4]
+                .flex-1(class="shadow-[0px_4px_4px_0px_rgba(0,0,0,0.20)] rounded-[10px]")
+                    picture.block
+                        img(src="/src/assets/images/pages/index/event.png" alt="")
+                    .flex.flex-col(class="p-[40px] text-center gap-[24px]")
+                        a(href="#" class="text-[20px] font-bold leading-[normal]") Alianta Group имеет  прочные связи с лучшими производителями
+                        p(class="leading-[normal]")
+                            | Alianta Group - один из крупнейших импортеров алкогольной продукции
+                            | и инновационных продуктов в России.
+                        p(class="leading-[normal]") 22.03.2022
+        .flex.justify-center
+            a(href="#" class="text-[#A41012] text-[16px] h-[40px] py-[12px] px-[67px] inline-flex justify-center items-center gap-[10px] flex-shrink-0 rounded-[10px] border-[1px] border-[#A41012]") Все мероприятия
