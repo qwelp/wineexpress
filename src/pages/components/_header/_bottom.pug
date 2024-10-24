@@ -1,9 +1,0 @@
-.border.border-gray100.py-5.hidden(class="md:block")
-    .container
-        nav
-            ul.flex.items-center.justify-center(class="gap-[30px] lg:gap-[40px] 2xl:gap-[80px]")
-                each item in ['вино', 'игристое', 'крепкие напитки', 'подборки', 'деликатесы', 'вода', 'бренды', 'все акции']
-                    li: a.font-normal.tracking-wider.uppercase.opacity-80(
-                        href="#"
-                        class=`text-[12px] whitespace-nowrap lg:text-[16px] xl:text-[20px] tracking-[0.72px] lg:tracking-[1.2px] capitalize opacity-80 ${item === 'все акции' ? 'text-customRed' : ''}`
-                    )=item
