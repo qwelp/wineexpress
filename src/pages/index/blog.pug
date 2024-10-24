@@ -1,18 +1,21 @@
-section(class="mb-[60px]")
+include ../components/_mixin/button
+include ../components/_mixin/title
+
+section(class="mb-[40px] sm:mb-[60px]")
     .container
-        h2.text-center(class="text-[28px] font-bold tracking-[0px] mb-[40px]") Блог
-        .grid.grid-cols-4(class="gap-[32px] mb-[40px]")
-            .col-span-2
+        +titleH2('Блог')
+        .grid.grid-cols-4(class="gap-[16px] xl:gap-[32px] mb-[28px] sm:mb-[20px] xl:mb-[40px]")
+            div(class="col-span-4 sm:col-span-2 rounded-[10px] overflow-hidden")
                 a.relative(href="#")
-                    p.absolute(class="leading-[normal] text-[20px] font-bold text-white left-[43px] bottom-[65px]") Alianta Group имеет  прочные связи с лучшими производителями
-                    img(src="/src/assets/images/pages/index/blog-1.png" alt="")
-            .col-span-1
+                    p.absolute(class="leading-[normal] text-[14px] sm:text-[10px] xl:text-[20px] font-bold text-white left-[20px] bottom-[30px] xl:left-[43px] xl:bottom-[65px]") Alianta Group имеет  прочные связи с лучшими производителями
+                    img.w-full(class="h-[160px] object-cover sm:h-auto" src="/src/assets/images/pages/index/blog-1.png" alt="")
+            div(class="col-span-4 sm:col-span-1 rounded-[10px] overflow-hidden")
                 a.relative(href="#")
-                    p.absolute(class="leading-[normal] text-[20px] font-bold text-white left-[43px] right-[40px] bottom-[40px]") Alianta Group имеет  прочные связи с лучшими производителями
-                    img(src="/src/assets/images/pages/index/blog-2.png" alt="")
-            .col-span-1
+                    p.absolute(class="leading-[normal] text-[14px] sm:text-[10px] xl:text-[20px] font-bold text-white left-[20px] right-[20px] bottom-[20px] xl:left-[43px] xl:right-[40px] xl:bottom-[40px]") Alianta Group имеет  прочные связи с лучшими производителями
+                    img.w-full(class="h-[160px] object-cover sm:h-auto" src="/src/assets/images/pages/index/blog-2.png" alt="")
+            div(class="col-span-4 sm:col-span-1 rounded-[10px] overflow-hidden")
                 a.relative(href="#")
-                    p.absolute(class="leading-[normal] text-[20px] font-bold text-white left-[43px] right-[40px] bottom-[40px]") Alianta Group имеет  прочные связи с лучшими производителями
-                    img(src="/src/assets/images/pages/index/blog-3.png" alt="")
+                    p.absolute(class="leading-[normal] text-[14px] sm:text-[10px] xl:text-[20px] font-bold text-white left-[20px] right-[20px] bottom-[20px] xl:left-[43px] xl:right-[40px] xl:bottom-[40px]") Alianta Group имеет  прочные связи с лучшими производителями
+                    img.w-full(class="h-[160px] object-cover sm:h-auto" src="/src/assets/images/pages/index/blog-3.png" alt="")
         .flex.justify-center
-            a(href="#" class="text-[#A41012] text-[16px] h-[40px] py-[12px] px-[67px] inline-flex justify-center items-center gap-[10px] flex-shrink-0 rounded-[10px] border-[1px] border-[#A41012]") Полный блог
+            +buttonMore('Полный блог')

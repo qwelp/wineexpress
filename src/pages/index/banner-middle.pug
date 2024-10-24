@@ -1,8 +1,8 @@
-.container(class="mb-[40px]")
-    .grid.grid-cols-2(class="gap-[40px]")
+.container(class="mb-[20px] sm:mb-[40px]")
+    .grid.grid-cols-2(class="gap-[8px] sm:gap-[20px] xl:gap-[40px]")
         a(href="#").col-span-2
-            img(src="/src/assets/images/pages/index/banner-middle.png" alt="")
-        a(href="#").col-span-1
-            img(src="/src/assets/images/pages/index/banner-middle-2.png" alt="")
-        a(href="#").col-span-1
-            img(src="/src/assets/images/pages/index/banner-middle-3.png" alt="")
+            img.w-full.object-cover(class="h-[120px] sm:h-auto rounded-[6px]" src="/src/assets/images/pages/index/banner-middle.png" alt="")
+        a(href="#" class="col-span-2 sm:col-span-1")
+            img.w-full.object-cover(class="h-[120px] sm:h-auto rounded-[6px]" src="/src/assets/images/pages/index/banner-middle-2.png" alt="")
+        a(href="#" class="col-span-2 sm:col-span-1")
+            img.w-full.object-cover(class="h-[120px] sm:h-auto rounded-[6px]" src="/src/assets/images/pages/index/banner-middle-3.png" alt="")

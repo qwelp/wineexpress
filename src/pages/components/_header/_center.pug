@@ -1,4 +1,4 @@
-div(class="shadow-[0px_10px_30px_0px_rgba(61,61,78,0.10)]")
+#js-header-center(class="shadow-[0px_10px_30px_0px_rgba(61,61,78,0.10)]")
     .container
         .flex.items-center.py-4(class="md:py-5 gap-[14px] md:gap-5 lg:gap-[18px] 2xl:gap-10")
             a(href="/", aria-label="Главная страница")
@@ -24,7 +24,7 @@ div(class="shadow-[0px_10px_30px_0px_rgba(61,61,78,0.10)]")
                     use(href="#icon-bg-header-address-table")
             .flex-1.relative
                 .flex.items-center(class="gap-[25px] xl::gap-[10px] 2xl:gap-10")
-                    button.flex.justify-center.items-center.rounded-lg.bg-customRed(
+                    button.js-toggle-menu.flex.justify-center.items-center.rounded-lg.bg-customRed(
                         type="button",
                         class="text-[10px] lg:text-[12px] w-[81px] h-[22px] md:w-[110px] gap-[8px] lg:gap-2 xl:gap-[15px] hidden md:flex xl:w-[151px] lg:h-[40px]",
                         aria-label="Каталог",
@@ -49,9 +49,8 @@ div(class="shadow-[0px_10px_30px_0px_rgba(61,61,78,0.10)]")
                             class="text-[14px] md:text-[10px] lg:text-base"
                         )
                         p.font-openSans.whitespace-nowrap(class="hidden md:block text-primary/50 text-xs xl:text-base xl:font-light") По каталогу
-                include _menu
             .flex
-                button(
+                button.js-popup-open(
                     type="button",
                     class="md:hidden",
                     aria-label="Меню",

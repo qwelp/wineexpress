@@ -3,8 +3,9 @@ mixin headerMenuSub(sectionData)
     include _sliders/filter_price
     include _sliders/filter_tabs
 
-#popup-menu.popup-menu
-    button.absolute(type="button" class="top-[15px] right-[15px] md:right-2 md:top-2 xl:right-[15px] xl:top-[15px]")
+.js-popup-wrapper.absolute.left-0.right-0.bottom-0.top-0.z-40.hidden
+#popup-menu.popup-menu.hidden
+    button.js-popup-close.absolute(type="button" class="top-[15px] right-[15px] md:right-2 md:top-2 xl:right-[15px] xl:top-[15px]")
         svg(class="w-[30px] h-[30px] md:w-[20px] md:h-[20px] xl:w-7 xl:h-7")
             use(href="#icon-control-close-middle")
     ul.flex.flex-col(class="md:hidden gap-[16px] mx-[17px] my-[15px]")
@@ -25,7 +26,7 @@ mixin headerMenuSub(sectionData)
                 svg(class="w-[24px] h-[24px]")
                     use(href="#icon-menu-city")
                 span Москва
-    .flex.flex-col(class="ml-[17px] md:mr-0")
+    .flex.flex-col(class="mx-[17px] md:mr-0 md:ml-0")
         .flex.flex-col(class="gap-x-[8px] md:grid md:grid-cols-[180px_1fr] md:gap-x-[22px] xl:grid-cols-[320px_1fr]")
             a.flex.items-center.col-start-1(href="#", class="md:p-[6px] md:pl-[11px] xl:pl-7 mt-[15px] xl:mt-[17px] mb-[12px] md:mb-[16px] gap-[4px] xl:gap-2")
                 svg(class="hidden md:block w-[20px] h-[20px] xl:w-10 xl:h-10")
@@ -49,7 +50,7 @@ mixin headerMenuSub(sectionData)
                     svg(class="w-[19px] h-[19px] stroke-primary  md:hidden", class= i === 0 ? 'rotate-180' : '')
                         use(href="#icon-arrow-menu-down-mobile")
                 .min-w-0.item2.col-start-2.row-start-1.row-span-7.pt-2(data-section=item, class= i === 0 ? 'block' : 'hidden')
-                    .relative.overflow-hidden(class="pb-[24px] md:pb-0 mt-[00px] xl:mt-[30px] mr-[-12px] md:mr-[20px] xl:mr-[43px]")
+                    .relative(class="pb-[24px] md:pb-0 mt-[00px] xl:mt-[30px] mr-[-12px] md:mr-[20px] xl:mr-[43px]")
                         +headerMenuSub({ items: mobileMenuSections, section: item })
         .min-w-0(class="hidden1")
             include _sliders/brands

@@ -1,10 +1,17 @@
-section
+include ../components/_mixin/title
+include ../components/_mixin/button
+
+section(class="mb-[34px] sm:mb-[20px] xl:mb-[40px]")
     .container
-        h2.text-center(class="text-[28px] font-bold tracking-[0px] mb-[40px]") Популярные категории
-        .flex.items-center.justify-between(class="gap-[32px] mb-[50px]")
-            each item, i in popularProducts
-                a.bg-gray100.bg-no-repeat.bg-left-bottom.flex.justify-end.flex-1(
-                    href="#"
-                    class=`h-[84px] rounded-[10px] pt-[10px] pr-[20px]`
-                    style=`background-image: url(/src/assets/images/pages/index/popular-categories-${i+1}.png)`)
-                    span(class="top-[28px] right-[15px]") !{item.title}
+        +titleH2('Популярные категории')
+        .js-slider-popular-categories.swiper-container.relative.overflow-hidden(class="pb-[25px] -mr-[12px] sm:mr-0")
+            .swiper-wrapper
+                each item, i in popularProducts
+                    .swiper-slide(class="max-w-[120px] sm:max-w-full")
+                        a.bg-gray100.bg-no-repeat.bg-left-bottom.flex-1.bg-contain.block.text-right(
+                            href="#"
+                            class=`h-[63px] sm:h-[42px] rounded-[10px] pt-[5px] pr-[10px] xl:pt-[10px] xl:pr-[20px] xl:h-[84px] leading-[14px] xl:leading-[normal]`
+                            style=`background-image: url(/src/assets/images/pages/index/popular-categories-${i + 1}.png)`)
+                            span(class="top-[28px] right-[15px] text-[12px] xl:text-[16px]") !{item.title}
+        .flex.justify-center
+            +buttonMore('Весь каталог')

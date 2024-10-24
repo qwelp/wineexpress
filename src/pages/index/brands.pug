@@ -1,18 +1,17 @@
-section(class="mb-[60px]")
+include ../components/_mixin/button
+include ../components/_mixin/title
+
+section(class="mb-[30px] sm:mb-[20px] xl:mb-[60px]")
     .container
-        h2.text-center(class="text-[28px] font-bold tracking-[0px] mb-[40px]") Бренды
-        .relative(class="mb-[40px]")
-            .js-brands__slider.swiper-container.overflow-hidden
-                button.js-brands__nav-left.absolute.z-10.flex.items-center.justify-center(class="w-[52px] h-[52px] bg-[#F2F3F5] rounded-full top-[50%] -left-[6px] -translate-y-1/2")
-                    svg(class="w-[27px] h-[12px]")
-                        use(href="#icon-arrow-slider-left")
-                button.js-brands__nav-right.absolute.z-10.flex.items-center.justify-center(class="w-[52px] h-[52px] bg-[#F2F3F5] rounded-full top-[50%] -right-[6px] -translate-y-1/2")
-                    svg(class="w-[27px] h-[12px]")
-                        use(href="#icon-arrow-slider-right")
+        +titleH2('Бренды')
+        .relative(class="mb-[20px] xl:mb-[40px]")
+            .js-brands__slider.swiper-container.overflow-hidden(class="-mr-[12px] sm:mr-0")
+                +sliderButtonLeft('js-brands__nav-left')
+                +sliderButtonright('js-brands__nav-right')
                 .swiper-wrapper
                     each item in [1, 1, 1, 2, 2, 2, 1]
-                        .swiper-slide
-                            .flex(class="p-[41px] justify-center items-center gap-[10px] rounded-[10px] border-[1px] bg-[#FFF]")
+                        .swiper-slide(class="max-w-[180px] sm:max-w-full")
+                            .flex(class="p-[20px] xl:p-[41px] justify-center items-center gap-[10px] rounded-[10px] border-[1px] bg-[#FFF]")
                                 img(src=`/src/assets/images/pages/index/brand-${item}.png` alt="" class="object-contain")
         .flex.justify-center
-            a(href="#" class="text-[#A41012] text-[16px] h-[40px] py-[12px] px-[67px] inline-flex justify-center items-center gap-[10px] flex-shrink-0 rounded-[10px] border-[1px] border-[#A41012]") Все бренды
+            +buttonMore('Все бренды')
